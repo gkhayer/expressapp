@@ -1,0 +1,18 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 7,
+    "sourceType": "module"
+  },
+  "parser": "babel-eslint",
+  "plugins": [
+    "react",
+    "class-property"
+  ],
+  "extends": ["google", "plugin:react/recommended"],
+  "rules": {
+    "no-extra-parens": "off",
+    "react/require-extension": "off",
+    "react/wrap-multilines": "off",
+    "react/jsx-sort-prop-types": "off"
+  }
+}

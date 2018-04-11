@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>MY APP</title>
+  <style>
+    .col1 {
+      padding: 8px;
+    }
+
+    .row {
+      padding: 8px;
+    }
+
+    p {
+      padding: 8px;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    table {
+      margin: 20px 10px;
+    }
+
+    th,
+    td.secondTable {
+      width: 42%;
+      text-align: left;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Express using MongoDb</h1>
+  <p>Please Enter the form below:</p>
+  <form action="/quotes" method="POST">
+    <table>
+      <tbody>
+        <tr class="row">
+          <td class="col1">First Name</td>
+          <td>
+            <input type="text" placeholder="Firstname" name="Fname">
+          </td>
+        </tr>
+        <tr class="row">
+          <td class="col1">Last Name</td>
+          <td>
+            <input type="text" placeholder="Lastname" name="Lname">
+          </td>
+        </tr>
+        <tr class="row">
+          <td class="col1">Phone Number</td>
+          <td>
+            <input type="number" maxlength="10" placeholder="Phone number" name="number">
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <button type="submit">Submit</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </form>
+  <table>
+    <thead>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Number</th>
+    </thead>
+    <tbody>
+      <% for(var i=0; i<quotes.length; i++) {%>
+        <tr class="quotes">
+          <td class="secondTable">
+            <span><%= quotes[i].Fname %></span>
+          </td>
+          <td class="secondTable">
+            <span><%= quotes[i].Lname %></span>
+          </td>
+          <td class="secondTable">
+            <span><%= quotes[i].number %></span>
+          </td>
+        </tr>
+      <% } %>
+    </tbody>
+  </table>
+</body>
+
+</html>
