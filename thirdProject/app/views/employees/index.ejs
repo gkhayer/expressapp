@@ -3,13 +3,15 @@
   <head>
     <title>Employee List</title>
     <link rel='stylesheet' href='/css/styles.css' type="text/css" />
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
   </head>
   <body>
     <div class="container">
-      <h3><a href="/employees/create">Create Employee</a></h3>
       <h1>Employee List</h1>
       <% if(employees.length > 0) { %>
-        <table>
+        <table class="table">
           <thead>
             <tr>
               <th>Employee Name</th>
@@ -28,6 +30,7 @@
       <% } else { %>
         <div>No employees Found</div>
       <% } %>
+      <h3><a href="/employees/create">Create Employee</a></h3>
     </div>
   </body>
 </html>

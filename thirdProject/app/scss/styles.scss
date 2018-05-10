@@ -13,10 +13,10 @@ a {
 .container {
   background-color: $containerbackground;
   border-radius: 6px;
-  display: flex;
-  flex-flow: column wrap;
+ // display: flex;
+  //flex-flow: column wrap;
   height: auto;
-  justify-content: flex-start;
+  //justify-content: flex-start;
   padding: 50px;
 
   h3 {
@@ -35,12 +35,16 @@ a {
   }
 
   table {
-    display: flex;
-    flex-flow: column wrap;
+   // display: flex;
+   // flex-flow: column wrap;
 
     tr {
+      th {
+        padding: 5px 100px 5px 5px;
+      }
+
       td {
-        padding: 5px;
+        padding: 5px 100px 5px 5px;
 
         button {
           background-color: $backgroundbutton;
