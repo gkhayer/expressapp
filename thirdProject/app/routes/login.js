@@ -1,10 +1,14 @@
 var express = require('express');
 var router = express.Router();
-var User =  require('../models/User');
+var User = require('../models/Login');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.sendFile(path.join(__dirname + '/views/login.ejs'));
+router.get('/', function(req, res) {
+  res.render('login', { title: 'Join Us:' });
+});
+
+router.get('/signup', function(req, res) {
+  res.render('login', { title: 'Join Us:' });
 });
 
 //POST route for reading data
