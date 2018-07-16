@@ -3,13 +3,6 @@ var router = express.Router();
 var User = require('../models/Login');
 
 /* GET home page. */
-router.get('/', function(req, res) {
-  res.render('login', { title: 'Join Us:' });
-});
-
-router.get('/signup', function(req, res) {
-  res.render('login', { title: 'Join Us:' });
-});
 
 //POST route for reading data
 router.post('/', function(req, res, next) {

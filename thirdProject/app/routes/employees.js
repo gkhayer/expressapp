@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var employee = require("../controllers/EmployeeController.js");
+var employee = require('../controllers/EmployeeController.js');
 
 // Get all employees
 router.get('/', function(req, res) {
@@ -36,5 +36,6 @@ router.post('/update/:id', function(req, res) {
 router.post('/delete/:id', function(req, res, next) {
   employee.delete(req, res);
 });
+
 
 module.exports = router;
